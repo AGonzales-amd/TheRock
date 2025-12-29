@@ -1,0 +1,25 @@
+From 652bf6b51bfa1062a670525bece1bec7a01e1e5e Mon Sep 17 00:00:00 2001
+From: Martin Kroeker <martin@ruby.chemie.uni-freiburg.de>
+Date: Sat, 20 Dec 2025 18:08:03 +0100
+Subject: [PATCH 6/6] Initialize local variable to remove a compiler warning
+
+---
+ lapack-netlib/SRC/iparmq.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lapack-netlib/SRC/iparmq.c b/lapack-netlib/SRC/iparmq.c
+index 57578929f..dbecda205 100644
+--- a/lapack-netlib/SRC/iparmq.c
++++ b/lapack-netlib/SRC/iparmq.c
+@@ -745,7 +745,7 @@ integer iparmq_(integer *ispec, char *name__, char *opts, integer *n, integer
+     /* Local variables */
+     integer i__, ic, nh, ns, iz;
+     char subnam[6];
+-    integer name_len;
++    integer name_len=0;
+ 
+ /*  -- LAPACK auxiliary routine (version 3.7.1) -- */
+ /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
+-- 
+2.34.1
+

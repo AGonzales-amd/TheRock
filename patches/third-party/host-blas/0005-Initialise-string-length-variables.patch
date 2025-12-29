@@ -1,0 +1,25 @@
+From 9fa64b9a3da9e1bf059bc455b23f02448030ad19 Mon Sep 17 00:00:00 2001
+From: Martin Kroeker <martin@ruby.chemie.uni-freiburg.de>
+Date: Sat, 20 Dec 2025 18:04:30 +0100
+Subject: [PATCH 5/6] Initialise string length variables
+
+---
+ lapack-netlib/SRC/lsamen.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lapack-netlib/SRC/lsamen.c b/lapack-netlib/SRC/lsamen.c
+index 252fed8dc..84d12c7ae 100644
+--- a/lapack-netlib/SRC/lsamen.c
++++ b/lapack-netlib/SRC/lsamen.c
+@@ -594,7 +594,7 @@ logical lsamen_(integer *n, char *ca, char *cb)
+     /* Local variables */
+     integer i__;
+     extern logical lsame_(char *, char *);
+-    integer ca_len,cb_len;
++    integer ca_len=0,cb_len=0;
+ 
+ /*  -- LAPACK auxiliary routine (version 3.7.0) -- */
+ /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
+-- 
+2.34.1
+

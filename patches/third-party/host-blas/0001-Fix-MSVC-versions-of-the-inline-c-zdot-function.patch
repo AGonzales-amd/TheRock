@@ -1,7 +1,7 @@
 From 938477683f760da4806742a16e38ea3b4c2a8dac Mon Sep 17 00:00:00 2001
 From: Martin Kroeker <martin@ruby.chemie.uni-freiburg.de>
 Date: Thu, 11 Dec 2025 22:39:11 +0100
-Subject: [PATCH] Fix MSVC versions of the inline c/zdot function
+Subject: [PATCH 1/6] Fix MSVC versions of the inline c/zdot function
 
 ---
  lapack-netlib/SRC/cbbcsd.c               | 49 ++++++++++++++-------
